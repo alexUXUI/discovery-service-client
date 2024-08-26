@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  background-Color: #f9f9f9;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+input::placeholder {
+  color: #667085;
+  padding-left: 5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #002266;
+}
+
+p,
+div,
+ul,
+li,
+td {
+  color: #101828;
+}
+
+table {
+  background: white;
+  border-radius: 15px;
+}
+
+th,
+thead {
+  background: #EAECF0;
+}
+
+thead,
+tbody {
+  border-radius: 15px;
+}
+
+main {
+  padding: 20px;
+}
+
+.content {
+  display: flex;
+  min-height: 200px;
+  line-height: 1.1;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content h1 {
+  font-size: 3.6rem;
+  font-weight: 700;
+}
+
+.content p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  opacity: 0.5;
+}
