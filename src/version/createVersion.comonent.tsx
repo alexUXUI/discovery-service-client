@@ -183,9 +183,6 @@ export const CreateVersion = ({ projectId, microFrontendId }: { projectId: strin
                 </button>
             </form>
             {mutation.isError && <div>Error: {JSON.stringify(mutation.error)}</div>}
-            {mutation.isSuccess && (
-                <div>Version created successfully!</div>
-            )}
         </div>
     );
 };

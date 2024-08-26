@@ -119,7 +119,7 @@ export const ListProject = () => {
                             </tbody>
                         </table>
                     ) : (
-                        <h1>No projects!</h1>
+                        <h4>No projects</h4>
                     )}
                 </div>
                 <Outlet />
