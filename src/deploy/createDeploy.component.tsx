@@ -3,7 +3,7 @@ import { useMutation, useQueryClient } from 'react-query';
 import { useAuth } from '../auth/auth.context';
 import { toast } from 'react-toastify';
 
-const createDeploy = async (idToken: string, projectId: string, microFrontendId: string, newDeploy: { targetVersion: string, deploymentStrategy: string }, logout: any) => {
+const createDeploy = async (idToken: string, projectId: string, microFrontendId: string, newDeploy: { targetVersion: string, deploymentStrategy: string }) => {
     try {
         const response = await fetch(`https://ez4fmpt082.execute-api.us-east-1.amazonaws.com/Stage/projects/${projectId}/microFrontends/${microFrontendId}/deployment`, {
             method: 'POST',
@@ -20,7 +20,6 @@ const createDeploy = async (idToken: string, projectId: string, microFrontendId:
         return data;
     } catch (error: any) {
         console.error('There was an error!', error);
-        logout();
         return Promise.reject(error);
     }
 };

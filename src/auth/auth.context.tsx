@@ -1,6 +1,5 @@
 import { createContext, useContext, useEffect, useState } from 'react';
-import { AuthenticationDetails, CognitoUser } from 'amazon-cognito-identity-js';
-import { CognitoUserPool } from 'amazon-cognito-identity-js';
+import { AuthenticationDetails, CognitoUser, CognitoUserPool } from 'amazon-cognito-identity-js';
 
 export const AuthContext = createContext<any>({});
 
@@ -24,7 +23,6 @@ export const AuthProvider = ({ children }: any) => {
     }, [idToken]);
 
     const authenticate = (Email: string, Password: string) => {
-        console.log('Authenticating with', Email, Password);
         return new Promise((resolve, reject) => {
             const user = new CognitoUser({
                 Username: Email,
